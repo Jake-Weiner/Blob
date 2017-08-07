@@ -64,6 +64,7 @@ def run_game():
         clock.tick(60)
 
 def keyboard_input():
+    'keyboard stuff'
 
 def main():
     pygame_init()

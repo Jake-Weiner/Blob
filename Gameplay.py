@@ -54,18 +54,26 @@ def create_blobs():
     global blobs_manager
     blobs_manager = Blobs_Manager.blobs_manager(blobs)
 
-
-
-def main():
-    pygame_init()
-
+def run_game():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-        draw_environment(blobs)
+        draw_environment(blobs_manager.get_blobs())
         clock.tick(60)
+
+def keyboard_input():
+
+def main():
+    pygame_init()
+    create_blobs()
+    thread.start_new(run_game,())
+    thread.start_new()
+    while 1:
+        pass
+
 
 if __name__ == '__main__':
     main()
+

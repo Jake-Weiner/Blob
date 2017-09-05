@@ -11,8 +11,6 @@ BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
-
-
 def pygame_init():
     global game_display
     global clock
